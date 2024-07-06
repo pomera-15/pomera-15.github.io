@@ -1,15 +1,17 @@
 <div>
-    <!-- 記事タイトルの一覧 -->
-    <ul class="post-list" style="font-size:20px;margin-bottom:18px;margin-top:18px;">
-      {{ range .Pages }}
-      {{ if .File.Path }}
+  <!-- 記事タイトルの一覧 -->
+  <ul class="post-list" style="font-size:20px;margin-bottom:18px;margin-top:18px;">
+    {{ range .Pages }}
+      {{ with .File }}
+        {{ if .File.Path }}
         <li>
-          <time datetime="{{ .Date.Format "2006-01-02" }}">
-          - {{ .Date.Format "2006/01/02"}} {{ partial "categories-list" .}}<br>
+          <time datetime="{{ .Date.Format " 2006-01-02" }}">
+            - {{ .Date.Format "2006/01/02"}} {{ partial "categories-list" .}}<br>
           </time>
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         </li>
+        {{ end }}
       {{ end }}
-      {{ end }}
-      </ul>
-  </div>
+    {{ end }}
+  </ul>
+</div>
