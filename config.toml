@@ -1,0 +1,101 @@
+baseURL = "https://pomera-15.github.io"
+title = "pomera_🍓's blog"
+author = "pomera_15"
+# copyright = ""
+paginate = 3
+languageCode = "ja"
+DefaultContentLanguage = "ja"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+# themeの指定
+theme = "my_theme"
+
+# emojiを使えるように (usage_example:":smile:")
+enableEmoji = true
+
+# syntax highlightを有効
+pygmentsUseClasses = true
+pygmentsCodefences = true 
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "books"
+    name = "Books"
+    url = "/books/"
+    weight = 10
+
+#  [[menu.main]]
+#    identifier = "posts"
+#    name = "Posts"
+#    title = "Posts"
+#    url = "/post/"
+#    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
+
+[permalinks]
+  #post = "/post/:title/"
+  post = "/post/:year/:month/:day/:title/"
+
+[params]
+  mainSections=["post"]
+
+  [params.categories]
+    [params.categories.test]
+      name="テスト"
+      color="badge-danger"
+    [params.categories.llm]
+      name="LLM"
+      color="badge-primary"

@@ -1,0 +1,10 @@
+
+    {{$categories := .Params.categories}}
+
+    {{ range $key, $value := $.Site.Params.categories }}
+      {{if in $categories $key}}
+        <span class="badge {{ $value.color }} badge;">
+          #{{ $value.name }}
+        </span>
+      {{ end }}
+    {{ end }}

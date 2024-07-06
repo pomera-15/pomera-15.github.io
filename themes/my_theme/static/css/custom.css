@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* ウィンドウ背景色の設定 */
+.body {
+    background-color: #c0c0c0;
+}
+
+/* リンクのフォントが青色横線になるのを防ぐ */
+.title-link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* リンクの下線を消す */
+.head__inner a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* カーソルを合わせたときにリンクの下線を表示する */
+.head__inner a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+/* 横線 */
+hr.border-style{
+  border-top: 1px solid #8c8b8b;
+}
+
+/* 文章を中央揃え */
+.text-center{
+    text-align: center;
+}
+
+.post-list{
+    margin-left:0;
+    list-style:none;
+    font-size:16px;
+}
+
+.post-list li{
+    margin-bottom: 5px;
+}
+
+.selection h3{
+    /*
+    color:#fcfcfa;
+    background:#ff6188;
+    */   
+    color:#000;
+    background:#ffff66;
+}
+
+.content{
+    font-size: 16px;
+}
+
+.content h1{
+    font-size: 24px;
+}
+
+.content h2{
+    font-size: 22px;
+}
+
+.content h3{
+    font-size: 20px;
+}
+
+.foot__inner{
+  text-align: center;
+}
+
+.center{
+  text-align: center;
+}

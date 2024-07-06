@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ja">
+  {{partial "head" .}}
+  <body style="background-color:#F4F5F7;">
+    <div class="container" style="max-width:60%; min-width:800px">
+    {{- partial "header.html" . -}}
+      {{ block "main" . }}{{ end }}<!-- define "main"の内容が表示される -->
+    {{- partial "footer.html" . -}}
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,10 @@
+
+<div style="font-size:20px;margin-bottom:18px;margin-top:18px;">
+  {{ range $key, $value := $.Site.Params.categories }}
+    <a href="{{ "/categories/" | relURL }}{{ $key | urlize }}" style="text-decoration:none;">
+    <span class="badge {{ $value.color }} badge;">
+      #{{ $value.name }}
+    </span>
+    </a>
+  {{ end }}
+</div>
